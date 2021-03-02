@@ -44,7 +44,6 @@ phases:
     commands:
       # Security-scanning the image
       - echo "$REPOSITORY_URI:$TAG"
-      - $(aws ecr get-login --no-include-email)
       - echo 'Triggering a pre-registry scan'
       - echo 'scans the image image before it is being pushed to the ECR registry'
       - echo 'This ensures that we only get clean images in the ECR'
